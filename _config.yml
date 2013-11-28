@@ -1,0 +1,5 @@
+markdown: rdiscount
+permalink: /:year/:month/:title/
+author: KyleZhao
+pygments: true
+paginate: 24
