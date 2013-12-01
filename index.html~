@@ -1,8 +1,8 @@
 ---
-title: Luke's Homepage
+title: Kyle's Homepage
 layout: page
 ---
-
+<meta httpequiv="content-type" content="text/html; charset=UTF-8">
 <ul class="listing">
 {% for post in paginator.posts %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
