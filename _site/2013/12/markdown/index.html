@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="KyleZhao" />
-    <title>links | KyleZhao</title>
+    <title>markdown语法小结 | KyleZhao</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAD/APr59wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgERERERERIiAREREREREiIBERERERESIgERIiIiERIiAREiIiIREiIBESIhERESIgERIiERERIiAREiIiIiIiIBESIiIiIiIgERIiIiIiIiAREREREREAABEREREREQAAERERERERAADgAQAA4AEAAOABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAA8AAAAPAAAADwAA" rel="icon" type="image/x-icon" />
     <link href="/feed/" rel="alternate" title="KyleZhao" type="application/atom+xml" />
     
@@ -26,21 +26,65 @@
           <a href="/about" class="ss-icon" title="About" >user</a>
           <a href="/feed" class="ss-icon" title="Subscribe by RSS" >rss</a>
         </div>
-        <h1>links</h1>
+        <h1>markdown语法小结</h1>
         </header>
         <hr>
         <article class="content">
         <section class="post">
-<p>暂无</p>
+<p><meta http-equiv="content-type" content="text/html; charset=UTF-8"></p>
+
+<h4>换行</h4>
+
+<p>需要换行的话在行末尾加上2个以上的空格就可以了。</p>
+
+<h4>标题</h4>
+
+<p>Markdown支持两种标题的语法，类Setext和类atx形式。 <br/>
+类Setext使用<code>=</code>(最高阶标题)和<code>-</code>(第二阶标题)。 <br/>
+类atx通过在行首插入1到6个<code>#</code>，对应到标题的1到6阶。</p>
+
+<h4>区块引用</h4>
+
+<p>标记引用使用<code>></code>。就好象下面这样</p>
+
+<blockquote><p>I'm sad.</p>
+
+<h4>列表</h4>
+
+<p>无序列表使用星号，加号或者减号作为列表标记。</p></blockquote>
 
 </section>
+<section class="meta">
+<span class="author">
+  <a href="http://yefengzkk.github.io">KyleZhao</a>
+</span>
+<span class="time">
+  /
+  <time datetime="2013-12-01">2013-12-01</time>
+</span>
+<br />
+<span class="license">
+  Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
+</span>
 
+<span class="categories">
+  in categories
+  
+</span>
+
+
+<span class="tags">
+  tagged with 
+  
+</span>
+
+</section>
 <section class="comment">
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'Kyle Z.'; // required: replace example with your forum shortname
-    var disqus_url = '/links/';
+    var disqus_url = '/2013/12/markdown/';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -52,7 +96,24 @@
 </section>
 
 
-
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = '/2013/11/time/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+  });
+})
+</script>
 
 
         </article>
