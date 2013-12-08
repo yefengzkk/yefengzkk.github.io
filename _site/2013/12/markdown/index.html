@@ -11,6 +11,7 @@
     <link href='/media/webfonts/ss-social.css' rel='stylesheet'>
     <link href='/media/webfonts/ss-standard.css' rel='stylesheet'>
     <link href="/media/css/screen.css" rel="stylesheet">
+    <link href="/media/css/personalization.css" rel="stylesheet">
 
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
   </head>
@@ -63,19 +64,22 @@
 
 <h4>代码区块</h4>
 
-<p>要在Markdown中建立代码区块很简单，只要简单地缩进4个空格或是一个制表符就可一了。这个每行一阶的缩进都会被移除，转化为<code></code>标签。</p>
+<p>要在Markdown中建立代码区块很简单，只要简单地缩进4个空格或是一个制表符就可以了。这个每行一阶的缩进都会被移除，转化为<code></code>标签。如果在代码区块之前有文字的话，你必须<strong>先空一行</strong>，jekyll才会转化，否则是不转化的。</p>
 
 <h4>分隔线</h4>
 
-<p>你可以在一行中用三个以上的星号，减号或底线来建立一个分隔线，行内不能有其他符号。你也可以在星号或者减号中间插入空格。
-    ----</p>
+<p>你可以在一行中用三个以上的星号，减号或底线来建立一个分隔线，行内不能有其他符号。你也可以在星号或者减号中间插入空格。</p>
+
+<hr />
 
 <h4>链接</h4>
 
 <p>Markdown支持两种形式的链接语法：行内式和参考式两种形式。不管是哪一种，链接文字都是用[方括号]来标记。<br/>
 要建立一个行内式的链接，只要在方括号后面紧接着圆括号并插入网址即可，如果你还想加上链接的title文字，只要在网址后面，用双引号把title文字包起来即可。 <br/>
-参考式的链接实在链接文字的括号后面再接另一个方括号，而在第二个方括号里面填入用以辨识链接的标记。接着在文件的任意处，你可以把这个标记的链接内容定义出来.<br/>
-    [id]: http://example.com "Optional Title Here"</p>
+参考式的链接实在链接文字的括号后面再接另一个方括号，而在第二个方括号里面填入用以辨识链接的标记。接着在文件的任意处，你可以把这个标记的链接内容定义出来.</p>
+
+<pre><code>[id]: http://example.com "Optional Title Here"
+</code></pre>
 
 <h4>强调</h4>
 
@@ -91,22 +95,32 @@
 <h4>图片</h4>
 
 <p>Markdown使用一种和链接很相似的语法来标记图片，同样也允许两种样式：行内式和参考式。 <br/>
-行内式的图片语法看起来是：
-    <img src="/path/to/img.jpg" alt="Alt text" />
-    <img src="/path/to/img.jpg" title="Optional title" alt="Alt text" />
-详细叙述如下： <br/>
+行内式的图片语法看起来是：</p>
+
+<pre><code>![Alt text](/path/to/img.jpg)   
+![Alt text](/path/to/img.jpg "Optional title")   
+</code></pre>
+
+<p>详细叙述如下： <br/>
 <em>一个惊叹号<code>!</code>
 </em>接着一个方括号，里面放上图片的替代文字
 *接着一个括号，里面网上图片的地址，最后还可以用引号包住并加上选择性的‘title’文字。
-参考式的图片语法长这样： <br/>
-    ![Alt text][id]
-id是图片参考的名称，图片参考的定义方式和链接参考一样：
-    [id]: url/to/image "Optional title attribute"</p>
+参考式的图片语法长这样：</p>
+
+<pre><code>![Alt text][id]
+</code></pre>
+
+<p>id是图片参考的名称，图片参考的定义方式和链接参考一样：</p>
+
+<pre><code>[id]: url/to/image "Optional title attribute"
+</code></pre>
 
 <h4>自动链接</h4>
 
-<p>Markdown支持以不交简短的自动链接形式来处理网址和电子邮件信箱。<br/>
-    <code>&lt;http://example.com&gt;</code></p>
+<p>Markdown支持以不交简短的自动链接形式来处理网址和电子邮件信箱。</p>
+
+<pre><code>&lt;http://example.com&gt;
+</code></pre>
 
 <h4>反斜杠</h4>
 
@@ -172,6 +186,8 @@ $(function(){
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
+        url = '/2013/12/cppkeyworld1/';
+        
         }
         if (url) {
             window.location = url;
@@ -185,7 +201,7 @@ $(function(){
       </div>
 
     <footer>
-        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2008 - 2013 by <a href="https://github.com/yefengzkk/">Kyle</a> | <span class="label label-info">2013-12-03 16:01:29 CST</span></small></p>
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2008 - 2013 by <a href="https://github.com/yefengzkk/">Kyle</a> | <span class="label label-info">2013-12-08 15:31:30 CST</span></small></p>
     </footer>
 
     </div>

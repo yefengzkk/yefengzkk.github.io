@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="KyleZhao" />
-    <title>把时间当作朋友——读书笔记 | KyleZhao</title>
+    <title>C++ 关键字解析（1） | KyleZhao</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAD/APr59wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgERERERERIiAREREREREiIBERERERESIgERIiIiERIiAREiIiIREiIBESIhERESIgERIiERERIiAREiIiIiIiIBESIiIiIiIgERIiIiIiIiAREREREREAABEREREREQAAERERERERAADgAQAA4AEAAOABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAA8AAAAPAAAADwAA" rel="icon" type="image/x-icon" />
     <link href="/feed/" rel="alternate" title="KyleZhao" type="application/atom+xml" />
     
@@ -27,38 +27,162 @@
           <a href="/about" class="ss-icon" title="About" >user</a>
           <a href="/feed" class="ss-icon" title="Subscribe by RSS" >rss</a>
         </div>
-        <h1>把时间当作朋友——读书笔记</h1>
+        <h1>C++ 关键字解析（1）</h1>
         </header>
         <hr>
         <article class="content">
         <section class="post">
-<p><meta http-equiv="content-type" content="text/html; charset=UTF-8"></p>
+<h3>导言</h3>
 
-<h2>人和大脑</h2>
+<p>从自己大一开始上C++的课程到现在，已经有5年的历史了，当然中间也学了其它语言，我能说我对C++很熟悉吗？这恐怕要打一个问号。说说看过的关于C++的书吧。</p>
 
-<p>书中提到一个很有趣的事情是人和自己的大脑往往背道而驰，很多时候你想的和你做的是相互矛盾的，产生的原因就是人不了解大脑运行的机制。如果把人和自己的大脑分离开来看的话，我们需要学会控制我们自己的大脑。</p>
+<pre><code>1.C++ Primer 看完一遍，除最后一章，其余都看完。
+2.Effective C++看过一遍。
+2.深入探索C++对象模型，前两章看完。  
+3.C++大学教程（本科课程用书）基本没看过  
+</code></pre>
 
-<h2>心智</h2>
+<p>再来说一说用C++完成的项目，除了零星写过的小程序使用的是C++，好像就没用过C++了。这里零星的小程序指的是数据结构课的小作业。所以至此为止，我得出的结论是我对C++不熟。为了更加深入的理解C++这门语言，我决定记录我理解的C++。于是就有了此篇。</p>
 
-<p>李笑来在文中一直用心智这个词，我认为心智实际上是在和我们骨子里面的基因做斗争，人需要克服与生具来的“惰性”，人不能被眼前的暂时的利益所蒙蔽，这会导致我们在未来失去更多。</p>
+<h3>关键字</h3>
 
-<h2>耐心</h2>
+<p>C++的关键字是指该语言的保留字，关键字不能用作程序的标识符。每个关键字都有特殊的含义。以下是C++所保留的关键字。</p>
 
-<p>急功近利是这个时代的特征，但是它也是阻碍我们前进的拦路虎。我们需要做的是多一点点耐心。如何多一点耐心呢，那就是对事物了解得多一点，这样你对未知的恐惧就会少一些，更容易面对将要遇到的困难。</p>
+<table>
+<thead>
+<tr>
+<th>* </th>
+<th> * </th>
+<th> *  </th>
+<th>*</th>
+<th>*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>alignas</em></td>
+<td><em>alignof</em></td>
+<td> asm   </td>
+<td> auto   </td>
+<td> bool</td>
+</tr>
+<tr>
+<td>break</td>
+<td>case</td>
+<td>catch</td>
+<td>char</td>
+<td><em>char16_t</em></td>
+</tr>
+<tr>
+<td><em>char32_t</em></td>
+<td>class</td>
+<td>const</td>
+<td><em>constexpr</em></td>
+<td>const_cast</td>
+</tr>
+<tr>
+<td>continue</td>
+<td><em>decltype</em></td>
+<td>default</td>
+<td>delete</td>
+<td>do</td>
+</tr>
+<tr>
+<td>double</td>
+<td>dynamic_cast</td>
+<td>else</td>
+<td>enum</td>
+<td>explicit</td>
+</tr>
+<tr>
+<td>export</td>
+<td>extern</td>
+<td>false</td>
+<td>float</td>
+<td>for</td>
+</tr>
+<tr>
+<td>friend</td>
+<td>goto</td>
+<td>if</td>
+<td>inline</td>
+<td>int</td>
+</tr>
+<tr>
+<td>long</td>
+<td>mutable</td>
+<td>namespace</td>
+<td>new</td>
+<td><em>noexcept</em></td>
+</tr>
+<tr>
+<td><em>nullptr</em></td>
+<td>operator</td>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+</tr>
+<tr>
+<td>register</td>
+<td>reinterpret_cast</td>
+<td>return</td>
+<td>short</td>
+<td>signed</td>
+</tr>
+<tr>
+<td>sizeof</td>
+<td>static</td>
+<td><em>static_assert</em></td>
+<td>static_cast</td>
+<td>struct</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>template</td>
+<td>this</td>
+<td><em>thread_local</em></td>
+<td>throw</td>
+</tr>
+<tr>
+<td>true</td>
+<td>try</td>
+<td>typedef</td>
+<td>typeid</td>
+<td>typename</td>
+</tr>
+<tr>
+<td>union</td>
+<td>unsigned</td>
+<td>using</td>
+<td>virtual</td>
+<td>void</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>wchar_t</td>
+<td>while</td>
+<td> </td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-<h2>和时间做朋友</h2>
 
-<p>这其实是比较难做到的，我们需要时刻提醒自己，时间的宝贵性。</p>
+<p>其中斜体标出的是C++ Primer第五版新加入的关键字，其余为和第四版相同的关键字，总数为73个。</p>
 
-<h2>Tips</h2>
+<h3>算术类型</h3>
 
-<p>1.记录自己每天的事件event-time-log <br/>
-2.吾日三省吾身 <br/>
-3.兴趣也是可以培养的，是因为你擅长做一件事，所以你才喜欢上它。</p>
+<p>在C++关键字中有一类是专门描述算术类型的，它们是<code>bool,char,char16_t,char32_t,double,float,int,long,short,wchar_t</code>。我们可以把<code>signed,unsigned</code>这两个表示有符号的关键字放在一起讨论。</p>
 
-<h2>感受</h2>
-
-<p>李笑来和刘未鹏都喜欢看通俗心理学的书籍，在暗时间和这本把时间当作朋友中都提到了很多，概括来说，现在人对时间的概念是很模糊的，我们既体会不到时间的重要性，而且，对于时间，我们总是倾向于注重眼前可见的利益。这样使得我们沉浸在今朝有酒今朝醉的状态无法自拔，拖延的习性大致也是因为如此，我们看不到未来的收益，所以我们选择拖延。面对这种情况，我们要做的首先了解自己每天时间都花在什么地方了，其次，我们需要找到其中一些暂时看不见收益，但是对我们的未来十分有益的事情，注意在这些事情上面花费比较多的精力，当然也要量力而行。</p>
+<pre><code>bool 只能取true，false，占一位。  
+char 占一个字节，八位。  
+double 双精度浮点数，在32位机器上占八个字节。  
+float 浮点数，  
+int 整数，在32位机器上占4个字节。  
+long 长整形  
+short   
+wchar_t 宽字符  
+</code></pre>
 
 </section>
 <section class="meta">
@@ -67,7 +191,7 @@
 </span>
 <span class="time">
   /
-  <time datetime="2013-11-30">2013-11-30</time>
+  <time datetime="2013-12-05">2013-12-05</time>
 </span>
 <br />
 <span class="license">
@@ -91,7 +215,7 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'Kyle Z.'; // required: replace example with your forum shortname
-    var disqus_url = '/2013/11/time/';
+    var disqus_url = '/2013/12/cppkeyworld1/';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -109,10 +233,12 @@ $(function(){
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             
+        url = '/2013/12/markdown/';
+        
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = '/2013/12/markdown/';
+        url = '/2013/12/darktime/';
         
         }
         if (url) {
